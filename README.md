@@ -40,4 +40,4 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 [about](about.md)
 
 ### Internal Image
-![viacomcbs logo](img/image001.png)
+![Golden Ratio](img/golden-ratio.png)
