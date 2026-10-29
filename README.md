@@ -1,18 +1,43 @@
-# Frontier AI Chronology (2022 – 2026)
+## Welcome to GitHub Pages
 
-Live interactive site: **[https://cemecbs.github.io/](https://cemecbs.github.io/)**
+You can use the [editor on GitHub](https://github.com/cemecbs/cemecbs.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
-An interactive, dark-mode timeline graph tracking the defining foundation models and frontier AI releases from late 2022 (ChatGPT) through late 2026.
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-## 🚀 Live Demo
-Visit **[https://cemecbs.github.io/](https://cemecbs.github.io/)** (or [/frontier-ai-timeline/](https://cemecbs.github.io/frontier-ai-timeline/)).
+### Markdown
 
-## 🌟 Highlights
-- **38 Frontier AI Models**: Covers OpenAI (GPT-3.5 to GPT-5, o1, o3), Google DeepMind (Gemini 1.0 to Gemini 3.8 Flash & Live), Anthropic (Claude 1 to Claude 4.5 Sonnet / Agentic), Meta AI (LLaMA 1 to Llama 4), Mistral AI (Mistral 7B, Mixtral 8x7B), xAI (Grok-1 to Grok 3), and DeepSeek (V3, R1, R2).
-- **Multiple Layout Views**:
-  - *Capability Graph*: 2D scatter/milestone plot against Arena Elo intelligence index with SVG connector curves.
-  - *Lab Swimlanes*: Chronological tracks per AI lab with sticky sidebar headers.
-  - *Milestone Stream*: Clean alternating milestone cards.
-- **Rich Hover Flyout**: Technical specifications, context windows (4k to 4M tokens), benchmarks, and breakthroughs on hover with collision-aware positioning and pin support.
-- **Head-to-Head Comparison**: Side-by-side spec comparison tool between any two frontier models.
-- **Zero Dependencies**: Pure HTML5, CSS3 (`color-scheme: dark`, custom scrollbars, WCAG 1.4.13), and vanilla JavaScript.
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+```markdown
+Syntax highlighted code block
+
+# Header 1
+## Header 2
+### Header 3
+
+- Bulleted
+- List
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
+
+For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+
+### Jekyll Themes
+
+Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/cemecbs/cemecbs.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+
+### Support or Contact
+
+Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+### Internal Link
+[about](about.md)
+
+### Internal Image
+![Golden Ratio](img/golden-ratio.png)
