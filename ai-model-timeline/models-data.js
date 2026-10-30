@@ -1221,6 +1221,38 @@
         arenaElo: 1520,
         math: "99.8% (Math)"
       }
+    },
+    {
+      id: "gemini-4-carbon",
+      name: "Gemini 4 Carbon",
+      shortName: "Gemini 4 Carbon",
+      lab: "google",
+      releaseDate: "2026-10-28",
+      dateFormatted: "Oct 28, 2026",
+      year: 2026,
+      quarter: "Q4 2026",
+      category: "flagship",
+      eloIndex: 1540,
+      contextWindow: "1,000,000 tokens (95% cache discount)",
+      architecture: "Native Multimodal TPU Architecture for Cybersecurity & Long-Horizon Software Engineering",
+      license: "Controlled Rollout / Enterprise API (Fairwind Program)",
+      isOpenWeights: false,
+      modalities: ["Text", "Vision", "Audio", "Video", "Code", "Terminal Actions"],
+      trainingParadigm: "Full-Lifecycle Defensive RL + Long-Horizon Autonomous Task Planning",
+      summary: "Google DeepMind's flagship model engineered for cybersecurity defense, multi-day autonomous software engineering, and resilient agentic execution.",
+      breakthroughs: [
+        "Debuted at #1 on the Artificial Analysis Intelligence Index (v5.0), scoring 59.",
+        "SOTA across the cybersecurity lifecycle: 88.2% on SEC-bench Pro (vulnerability discovery), 54.8% on ExploitGym, and 71.0% on CWE-bench (patching).",
+        "Engineered for long-horizon agentic workflows lasting multiple days, autonomously navigating complex bug remediation across vast codebases.",
+        "Zero percent (0.0%) attack success rate on Gray Swan's Indirect Prompt Injection Benchmark."
+      ],
+      benchmarks: {
+        mmlu: "97.5%",
+        secBenchPro: "88.2%",
+        swebench: "93.4%",
+        cweBench: "71.0%",
+        arenaElo: 1540
+      }
     }
   ];
 

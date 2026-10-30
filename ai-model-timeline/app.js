@@ -585,6 +585,9 @@
     if (model.benchmarks.swebench) {
       benchHtml += `<div class="bench-badge"><span class="bench-name">SWE-bench</span><span class="bench-score" style="color: #10b981;">${model.benchmarks.swebench}</span></div>`;
     }
+    if (model.benchmarks.secBenchPro) {
+      benchHtml += `<div class="bench-badge"><span class="bench-name">SEC-bench</span><span class="bench-score" style="color: #a855f7;">${model.benchmarks.secBenchPro}</span></div>`;
+    }
     if (model.benchmarks.math) {
       benchHtml += `<div class="bench-badge"><span class="bench-name">Math/AIME</span><span class="bench-score" style="color: #f59e0b;">${model.benchmarks.math}</span></div>`;
     }
