@@ -1253,6 +1253,40 @@
         cweBench: "71.0%",
         arenaElo: 1540
       }
+    },
+    {
+      id: "claude-fable-mythos-52",
+      name: "Claude Fable 5.2 & Claude Mythos 5.2",
+      shortName: "Claude Fable 5.2",
+      lab: "anthropic",
+      releaseDate: "2026-11-09",
+      dateFormatted: "Nov 9, 2026",
+      year: 2026,
+      quarter: "Q4 2026",
+      category: "flagship",
+      eloIndex: 1555,
+      contextWindow: "1,000,000 tokens",
+      architecture: "Single underlying model shipped two ways: Fable (cyber/bio safeguard classifiers) and Mythos (safeguards relaxed for vetted orgs)",
+      license: "Proprietary API (Fable: GA on all platforms, $8/$40 per M tokens) / Mythos: Cyber & Life Sciences Verification Programs",
+      isOpenWeights: false,
+      modalities: ["Text", "Vision", "Code", "Computer Use", "Terminal Actions"],
+      trainingParadigm: "Long-Horizon Agentic RL + Adjustable Effort Levels (Medium default to Xhigh/Max)",
+      summary: "Anthropic's most capable generally available model, aimed at long-horizon agentic coding and science. Cheaper per token than Fable 5.1, with about 30% faster output.",
+      breakthroughs: [
+        "Leads Claude Opus 5.5 on FrontierSWE v2 (69.9% vs 62.3%), Terminal-Bench-Science (74.6% vs 52.6%) and Remote Labor Index (41.3% vs 21.3%).",
+        "Formalized Fermat's Last Theorem in about 30 hours using about 1,000 parallel agents.",
+        "Mythos 5.2 found 10.2% more vulnerabilities than Opus 5.5 on Anthropic's CVE Rediscovery eval; Fable 5.2 has about 55% fewer safeguard blocks than 5.1.",
+        "Price cut to $8 / $40 per million tokens (Fable 5.1 was $10 / $50), with an optional fast mode up to 2.5x quicker."
+      ],
+      benchmarks: {
+        extra: {
+          "FrontierSWE v2": "69.9%",
+          "Terminal-Bench-Sci": "74.6%",
+          "OSWorld 2.1": "89.3%",
+          "HLE (tools)": "74.2%",
+          "Remote Labor Idx": "41.3%"
+        }
+      }
     }
   ];
 

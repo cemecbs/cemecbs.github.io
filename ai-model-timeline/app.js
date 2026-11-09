@@ -278,7 +278,7 @@
    */
   function getYForElo(elo) {
     const minElo = 1020;
-    const maxElo = 1540;
+    const maxElo = 1560;
     const canvasHeight = 560;
     const topPadding = 90;
     const bottomPadding = 50;
@@ -591,6 +591,12 @@
     if (model.benchmarks.math) {
       benchHtml += `<div class="bench-badge"><span class="bench-name">Math/AIME</span><span class="bench-score" style="color: #f59e0b;">${model.benchmarks.math}</span></div>`;
     }
+    // Any additional named benchmarks (label -> score) not covered above
+    if (model.benchmarks.extra) {
+      Object.entries(model.benchmarks.extra).forEach(([name, score]) => {
+        benchHtml += `<div class="bench-badge"><span class="bench-name">${name}</span><span class="bench-score" style="color: #38bdf8;">${score}</span></div>`;
+      });
+    }
     DOM.flyoutBenchmarksRow.innerHTML = benchHtml;
 
     // Pin button state
@@ -715,7 +721,7 @@
    */
   function calculateRelativeTime(dateStr) {
     const releaseTime = new Date(`${dateStr}T00:00:00Z`).getTime();
-    const now = new Date('2026-10-29T15:43:21Z').getTime(); // Present reference time
+    const now = new Date('2026-11-09T12:00:00Z').getTime(); // Present reference time
     const diffMonths = Math.round((now - releaseTime) / (1000 * 60 * 60 * 24 * 30.4));
 
     if (diffMonths <= 0) return 'Recent Release';
@@ -772,6 +778,12 @@
     DOM.compareModal.setAttribute('aria-hidden', 'true');
   }
 
+  function formatBenchmarks(b) {
+    return Object.entries(b).flatMap(([k, v]) =>
+      k === 'extra' ? Object.entries(v).map(([n, s]) => `${n}: ${s}`) : [`${k.toUpperCase()}: ${v}`]
+    ).join(' | ');
+  }
+
   function renderComparisonTable() {
     const modelA = state.models.find(m => m.id === DOM.compareSelectA.value) || state.models[0];
     const modelB = state.models.find(m => m.id === DOM.compareSelectB.value) || state.models[1];
@@ -789,8 +801,8 @@
       { label: 'Training Paradigm', valA: modelA.trainingParadigm, valB: modelB.trainingParadigm },
       { label: 'Modalities', valA: modelA.modalities.join(', '), valB: modelB.modalities.join(', ') },
       { label: 'Key Benchmarks', 
-        valA: Object.entries(modelA.benchmarks).map(([k, v]) => `${k.toUpperCase()}: ${v}`).join(' | '), 
-        valB: Object.entries(modelB.benchmarks).map(([k, v]) => `${k.toUpperCase()}: ${v}`).join(' | ') 
+        valA: formatBenchmarks(modelA.benchmarks), 
+        valB: formatBenchmarks(modelB.benchmarks) 
       },
       { label: 'Defining Breakthrough', valA: modelA.breakthroughs[0] || '', valB: modelB.breakthroughs[0] || '' }
     ];

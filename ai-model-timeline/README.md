@@ -32,7 +32,7 @@ Then visit [http://localhost:8000](http://localhost:8000) in any modern browser 
    - Distinctive lab brand color coding: OpenAI (emerald teal), Google DeepMind (electric blue), Anthropic (warm amber), Meta AI (violet), Mistral AI (blaze orange), xAI (steel silver), DeepSeek (sky azure).
 
 2. **Frontier AI Dataset (2022 – Late 2026)**:
-   - Covers 38 milestone frontier models from ChatGPT (GPT-3.5) and LLaMA 1 up through Claude 3.7 Sonnet, DeepSeek-R1, GPT-4.5, OpenAI o3, Gemini 3.0 Ultra, and Gemini 3.8 Flash & Live.
+   - Covers 40 milestone frontier models from ChatGPT (GPT-3.5) and LLaMA 1 up through Claude 3.7 Sonnet, DeepSeek-R1, GPT-4.5, OpenAI o3, Gemini 3.0 Ultra, and Gemini 3.8 Flash & Live, Gemini 4 Carbon, and Claude Fable 5.2 & Mythos 5.2.
    - Tracks architecture (Dense vs Mixture-of-Experts), context window scaling (from 4k to 4,000,000 tokens), benchmark ratings (Chatbot Arena Elo, MMLU, SWE-bench, Math/AIME), and defining technical breakthroughs.
 
 3. **Rich Hover Flyout (WCAG 1.4.13 Compliant)**:
@@ -73,6 +73,6 @@ frontier-ai-timeline/
 ├── index.html       # Semantic HTML5 markup, accessible popover containers & controls
 ├── styles.css       # Dark theme tokens, responsive layouts, glassmorphism, scrollbars
 ├── app.js           # Interactive state, view renderers, collision detection, event handlers
-├── models-data.js   # Structured dataset of 38 frontier models (2022 - 2026)
+├── models-data.js   # Structured dataset of 40 frontier models (2022 - 2026)
 └── README.md        # Documentation and quick start guide
 ```
