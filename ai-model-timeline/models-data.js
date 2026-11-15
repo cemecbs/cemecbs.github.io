@@ -78,6 +78,15 @@
       glow: "rgba(14, 165, 233, 0.4)",
       badgeBg: "rgba(14, 165, 233, 0.15)",
       border: "rgba(14, 165, 233, 0.4)"
+    },
+    thinkingmachines: {
+      id: "thinkingmachines",
+      name: "Thinking Machines",
+      color: "#ec4899",
+      accent: "#db2777",
+      glow: "rgba(236, 72, 153, 0.4)",
+      badgeBg: "rgba(236, 72, 153, 0.15)",
+      border: "rgba(236, 72, 153, 0.4)"
     }
   };
 
@@ -1235,7 +1244,7 @@
       eloIndex: 1540,
       contextWindow: "1,000,000 tokens (95% cache discount)",
       architecture: "Native Multimodal TPU Architecture for Cybersecurity & Long-Horizon Software Engineering",
-      license: "Controlled Rollout / Enterprise API (Fairwind Program)",
+      license: "Proprietary API: GA Nov 10, 2026 at $2/$10 per M tokens (intro, $4/$20 after Nov 30); first shipped Oct 28 to cyber defenders (Fairwind Program)",
       isOpenWeights: false,
       modalities: ["Text", "Vision", "Audio", "Video", "Code", "Terminal Actions"],
       trainingParadigm: "Full-Lifecycle Defensive RL + Long-Horizon Autonomous Task Planning",
@@ -1244,7 +1253,8 @@
         "Debuted at #1 on the Artificial Analysis Intelligence Index (v5.0), scoring 59.",
         "SOTA across the cybersecurity lifecycle: 88.2% on SEC-bench Pro (vulnerability discovery), 54.8% on ExploitGym, and 71.0% on CWE-bench (patching).",
         "Engineered for long-horizon agentic workflows lasting multiple days, autonomously navigating complex bug remediation across vast codebases.",
-        "Zero percent (0.0%) attack success rate on Gray Swan's Indirect Prompt Injection Benchmark."
+        "Zero percent (0.0%) attack success rate on Gray Swan's Indirect Prompt Injection Benchmark.",
+        "Generally available Nov 10, 2026 via the Gemini API and Google AI Ultra. Powers Antigravity /swarm multi-agent teams and DeepMind's AlphaProof Code, which formally verified the Signal protocol in Lean."
       ],
       benchmarks: {
         mmlu: "97.5%",
@@ -1252,6 +1262,60 @@
         swebench: "93.4%",
         cweBench: "71.0%",
         arenaElo: 1540
+      }
+    },
+    {
+      id: "inkling-2-small",
+      name: "Inkling 2 Small",
+      shortName: "Inkling 2 Small",
+      lab: "thinkingmachines",
+      releaseDate: "2026-11-05",
+      dateFormatted: "Nov 5, 2026",
+      year: 2026,
+      quarter: "Q4 2026",
+      category: "open-weights",
+      eloIndex: 1470,
+      contextWindow: "Not disclosed",
+      architecture: "Mixture-of-Experts (594B total / 17B active parameters)",
+      license: "Apache 2.0 (launched on Tinker Nov 5; weights followed after safety testing)",
+      isOpenWeights: true,
+      modalities: ["Text", "Vision"],
+      trainingParadigm: "Sparse MoE pre-training + post-training for efficient autonomous coding",
+      summary: "Thinking Machines Lab's second-generation efficient MoE model, opened under Apache 2.0 after launching on the Tinker platform.",
+      breakthroughs: [
+        "594B total parameters with only 17B active per token, aimed at frontier-class work at small-model serving cost.",
+        "Shipped first on Tinker with closed weights, then released under Apache 2.0 after external safety testing and red-teaming (available via Ollama).",
+        "Accepts text and image inputs."
+      ],
+      benchmarks: {}
+    },
+    {
+      id: "muse-ember",
+      name: "Meta Muse Ember",
+      shortName: "Muse Ember",
+      lab: "meta",
+      releaseDate: "2026-11-09",
+      dateFormatted: "Nov 9, 2026",
+      year: 2026,
+      quarter: "Q4 2026",
+      category: "efficient",
+      eloIndex: 1440,
+      contextWindow: "1,000,000 tokens",
+      architecture: "Compact Muse model, the execution layer under Muse Wonder's planning",
+      license: "Proprietary API (Meta Model API: muse-ember-1.0), closed weights",
+      isOpenWeights: false,
+      modalities: ["Text", "Vision", "Audio", "Video"],
+      trainingParadigm: "Trained using Muse Wonder Full for high-volume agent execution",
+      summary: "Meta's smallest and cheapest Muse model, built for high-volume agent work: tool calls, coding subtasks and document parsing.",
+      breakthroughs: [
+        "Scores 36 on the Artificial Analysis Intelligence Index, matching Claude Haiku 5.5.",
+        "Priced at $0.10 / $0.50 per million input/output tokens on the Meta Model API.",
+        "First model Meta trained using Muse Wonder Full. Also offered via Google Cloud and Oracle Cloud."
+      ],
+      benchmarks: {
+        extra: {
+          "AA Intelligence Idx": "36"
+        }
       }
     },
     {
@@ -1285,6 +1349,38 @@
           "OSWorld 2.1": "89.3%",
           "HLE (tools)": "74.2%",
           "Remote Labor Idx": "41.3%"
+        }
+      }
+    },
+    {
+      id: "gemini-4-hydrogen",
+      name: "Gemini 4 Hydrogen",
+      shortName: "Gemini 4 Hydrogen",
+      lab: "google",
+      releaseDate: "2026-11-12",
+      dateFormatted: "Nov 12, 2026",
+      year: 2026,
+      quarter: "Q4 2026",
+      category: "efficient",
+      eloIndex: 1500,
+      contextWindow: "1,000,000 tokens (up to 1M output)",
+      architecture: "Fast mid-tier Gemini 4 model with four thinking levels (low / medium / high / xhigh)",
+      license: "Proprietary API ($1.50 / $7.50 per M tokens, flat across 1M context)",
+      isOpenWeights: false,
+      modalities: ["Text", "Vision", "Audio", "Video", "PDF"],
+      trainingParadigm: "Adjustable thinking depth + multi-model orchestration with Gemini 4 Carbon and Argon",
+      summary: "Google's fast 'daily driver' Gemini 4 model, 2.5x faster than Gemini 3.8 Flash at a similar price, rolling out globally and inside Antigravity's Orchestrator.",
+      breakthroughs: [
+        "Scores 51 on the Artificial Analysis Intelligence Index at default high thinking, and 54 at the new xhigh tier.",
+        "Terminal-Bench 4.1: 57% vs 18.2% for Gemini 3.8 Flash. HLE-Diamond: 58.8%. Agents' Last Exam v1.1: 71.6%.",
+        "#1 overall on Vals Tax Agent Bench (52.3%) and tied for #1 on Vals Legal Research Bench (55.8%)."
+      ],
+      benchmarks: {
+        extra: {
+          "AA Intelligence Idx": "51 (54 xhigh)",
+          "Terminal-Bench 4.1": "57%",
+          "HLE-Diamond": "58.8%",
+          "Agents' Last Exam": "71.6%"
         }
       }
     }

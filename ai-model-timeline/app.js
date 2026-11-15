@@ -721,7 +721,7 @@
    */
   function calculateRelativeTime(dateStr) {
     const releaseTime = new Date(`${dateStr}T00:00:00Z`).getTime();
-    const now = new Date('2026-11-09T12:00:00Z').getTime(); // Present reference time
+    const now = new Date('2026-11-15T12:00:00Z').getTime(); // Present reference time
     const diffMonths = Math.round((now - releaseTime) / (1000 * 60 * 60 * 24 * 30.4));
 
     if (diffMonths <= 0) return 'Recent Release';
