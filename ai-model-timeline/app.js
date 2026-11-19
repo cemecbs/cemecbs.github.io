@@ -15,6 +15,7 @@
 
   const LABS = DATA.LABS || {};
   const FRONTIER_MODELS = DATA.FRONTIER_MODELS || [];
+  const PERSONAL_AGENTS = DATA.PERSONAL_AGENTS || [];
 
   // Global Timeline State
   const state = {
@@ -101,6 +102,69 @@
     applyFiltersAndRender();
     setupEventListeners();
     populateCompareSelectors();
+    renderPersonalAgents();
+  }
+
+  /**
+   * Render the Frontier Personal Agents cards (newest first).
+   * Built with DOM APIs and textContent only, so data is never parsed as HTML.
+   */
+  function renderPersonalAgents() {
+    const grid = document.getElementById('agentsGrid');
+    if (!grid) return;
+    const el = (tag, cls, text) => {
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text !== undefined) n.textContent = text;
+      return n;
+    };
+    const agents = [...PERSONAL_AGENTS].sort((x, y) => y.releaseDate.localeCompare(x.releaseDate));
+    grid.replaceChildren();
+
+    agents.forEach(agent => {
+      const lab = LABS[agent.lab] || { name: agent.lab, color: '#38bdf8' };
+      const card = el('article', 'agent-card');
+      card.dataset.agentId = agent.id;
+      card.style.setProperty('--agent-lab-color', lab.color);
+
+      const top = el('div', 'agent-card-top');
+      top.append(el('span', 'agent-lab-badge', lab.name), el('span', 'agent-status-pill', agent.status));
+      card.append(top);
+
+      const head = el('div');
+      head.append(el('h3', 'agent-name', agent.name), el('div', 'agent-date', agent.dateFormatted + ' · ' + calculateRelativeTime(agent.releaseDate)));
+      card.append(head, el('p', 'agent-summary', agent.summary));
+
+      const specs = el('dl', 'agent-spec-grid');
+      [['Form', agent.formFactor], ['Powered by', agent.poweredBy], ['Pricing', agent.pricing]].forEach(([k, v]) => {
+        specs.append(el('dt', '', k), el('dd', '', v));
+      });
+      card.append(specs);
+
+      const chips = el('div', 'agent-chips');
+      (agent.surfaces || []).forEach(s => chips.append(el('span', 'agent-chip', s)));
+      card.append(chips);
+
+      const caps = el('ul', 'agent-capabilities');
+      (agent.capabilities || []).forEach(c => caps.append(el('li', '', c)));
+      card.append(caps);
+
+      if (agent.sourceUrl && /^https:\/\//.test(agent.sourceUrl)) {
+        const src = el('div', 'agent-source');
+        const link = el('a', '', agent.sourceLabel || 'Official announcement');
+        link.href = agent.sourceUrl;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        src.append(link);
+        card.append(src);
+      }
+      grid.append(card);
+    });
+
+    const badge = document.getElementById('agentsCountBadge');
+    if (badge) badge.textContent = agents.length + ' tracked';
+    const stat = document.getElementById('statAgentsCount');
+    if (stat) stat.textContent = agents.length;
   }
 
   /**
@@ -721,7 +785,7 @@
    */
   function calculateRelativeTime(dateStr) {
     const releaseTime = new Date(`${dateStr}T00:00:00Z`).getTime();
-    const now = new Date('2026-11-18T12:00:00Z').getTime(); // Present reference time
+    const now = new Date('2026-11-19T12:00:00Z').getTime(); // Present reference time
     const diffMonths = Math.round((now - releaseTime) / (1000 * 60 * 60 * 24 * 30.4));
 
     if (diffMonths <= 0) return 'Recent Release';

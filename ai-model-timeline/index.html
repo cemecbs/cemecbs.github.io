@@ -42,6 +42,11 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
+          <span class="stat-val" id="statAgentsCount">0</span>
+          <span class="stat-label">Personal Agents</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
           <span class="stat-val">4.0 Yrs</span>
           <span class="stat-label">Timeline Span</span>
         </div>
@@ -172,6 +177,18 @@
         </div>
       </div>
     </div>
+
+    <!-- Frontier Personal Agents -->
+    <section class="agents-section" id="personalAgents" aria-labelledby="agentsSectionTitle">
+      <div class="agents-section-header">
+        <div>
+          <h2 class="agents-section-title" id="agentsSectionTitle">Frontier Personal Agents</h2>
+          <p class="agents-section-sub">Consumer agents from the frontier labs that act on your behalf across apps, devices and accounts. Tracked separately from the models that power them.</p>
+        </div>
+        <span class="agents-count-badge" id="agentsCountBadge"></span>
+      </div>
+      <div class="agents-grid" id="agentsGrid"></div>
+    </section>
   </main>
 
   <!-- Flyout Details Popover (Modern Web Guidance: position-aware & interest-triggered) -->

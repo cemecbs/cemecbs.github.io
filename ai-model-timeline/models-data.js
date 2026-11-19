@@ -12,6 +12,7 @@
     root.FRONTIER_AI_DATA = data;
     root.LABS = data.LABS;
     root.FRONTIER_MODELS = data.FRONTIER_MODELS;
+    root.PERSONAL_AGENTS = data.PERSONAL_AGENTS;
   }
 })(typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : this, function () {
 
@@ -1523,5 +1524,94 @@
     }
   ];
 
-  return { LABS, FRONTIER_MODELS };
+  // Frontier personal agents: consumer products that act on a user's behalf.
+  // Kept separate from FRONTIER_MODELS (not plotted on the capability chart).
+  const PERSONAL_AGENTS = [
+    {
+      id: "grok-bot",
+      name: "Grok Bot",
+      lab: "xai",
+      releaseDate: "2026-08-11",
+      dateFormatted: "Aug 11, 2026 (beta) · 1.0 on Nov 11, 2026",
+      status: "1.0 released",
+      formFactor: "Always-on AI teammates, each with its own cloud computer",
+      poweredBy: "Not disclosed",
+      surfaces: ["macOS", "iOS", "Slack", "Microsoft Teams", "Video calls"],
+      pricing: "Included with SuperGrok and Cursor paid plans (own usage allowance); no dollar price published",
+      summary: "xAI's always-on AI teammates that sign into your tools and operate apps, inboxes and websites, including ones without an API.",
+      capabilities: [
+        "Multiple Bots run in parallel, with a 'chief of staff' Bot overseeing the others; Bots message each other and join group chats.",
+        "Learns a routine by watching a task once, then reruns it.",
+        "Remembers conversations and preferences, and comes back for approval on sensitive actions.",
+        "1.0 (Nov 11, 2026) adds shared Team Bots, meeting attendance and proactive suggestions."
+      ],
+      sourceLabel: "x.ai: Grok Bot 1.0",
+      sourceUrl: "https://x.ai/news/grok-bot-1-0"
+    },
+    {
+      id: "meta-muse",
+      name: "Muse",
+      lab: "meta",
+      releaseDate: "2026-09-08",
+      dateFormatted: "Sep 8, 2026",
+      status: "Rolling out (US, Singapore)",
+      formFactor: "Personal agent on a dedicated cloud computer with its own browser (Muse Secure VM)",
+      poweredBy: "Muse Spark at launch; Muse Wonder announced as coming",
+      surfaces: ["iOS", "Android", "muse.ai", "WhatsApp", "AI glasses (coming soon)"],
+      pricing: "Free for most use, with subscription plans for more; prices not published",
+      summary: "Meta's personal AI agent from Meta Superintelligence Labs, used through an app and messaging, that keeps working after the app is closed.",
+      capabilities: [
+        "A separate 'Sentinel' agent on the same machine must approve anything Muse sends to the internet.",
+        "Asks before sensitive actions such as sending email or making a purchase, and keeps an audit trail.",
+        "Persistent memory that can forget specific things on request.",
+        "Purchases go through Link by Stripe with one-time-use cards."
+      ],
+      sourceLabel: "about.fb.com: Introducing Muse",
+      sourceUrl: "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/"
+    },
+    {
+      id: "openai-dots",
+      name: "dots",
+      lab: "openai",
+      releaseDate: "2026-09-29",
+      dateFormatted: "Sep 29, 2026",
+      status: "Gradual rollout",
+      formFactor: "Always-on agents inside ChatGPT, each with its own cloud computer and browser",
+      poweredBy: "GPT-6 Astra at launch; can draw on other models, incl. GPT-6.1 Terra",
+      surfaces: ["ChatGPT mobile", "ChatGPT desktop", "Web (desktop)", "Voice calls", "Slack", "Texting (US beta)"],
+      pricing: "ChatGPT Pro, Business Premium, Enterprise, Edu and Healthcare plans; no separate price published",
+      summary: "OpenAI's always-on personal agents in ChatGPT, announced at DevDay, that keep working when your computer is off.",
+      capabilities: [
+        "A dot runs background agents on several tasks in parallel.",
+        "Can start Work and Codex tasks and use connected computers.",
+        "Conversations with a dot do not count toward ChatGPT usage limits; tasks it starts in Work or Codex do.",
+        "Not available in the EEA, UK or Switzerland; Enterprise access on by default from Nov 18, 2026."
+      ],
+      sourceLabel: "OpenAI docs: dots",
+      sourceUrl: "https://learn.chatgpt.com/docs/dots"
+    },
+    {
+      id: "claude-duet",
+      name: "Claude Duet",
+      lab: "anthropic",
+      releaseDate: "2026-10-21",
+      dateFormatted: "Oct 21, 2026",
+      status: "Research preview (waitlist)",
+      formFactor: "Standalone app where Claude works as a proactive agent on a cloud VM with its own browser",
+      poweredBy: "Claude Opus 5.5",
+      surfaces: ["iOS", "Android", "claude.ai"],
+      pricing: "Included in Pro, Max and Ultra (US first); shares the usual Claude usage limits",
+      summary: "Anthropic's proactive personal agent app, which sends a morning brief and checks connected accounts every few hours.",
+      capabilities: [
+        "Access to over 6,000 connectors and plugins in the Claude Marketplace, plus memory and skills from the Claude account.",
+        "Waits for approval before sending messages, making payments, signing documents or deleting anything.",
+        "Trading securities and moving money between accounts are off-limits even with approval.",
+        "Purchases go through Link (Stripe) with a virtual card, and Shop Pay checkout."
+      ],
+      sourceLabel: "claude.com: Claude Duet",
+      sourceUrl: "https://claude.com/blog/claude-duet"
+    }
+  ];
+
+  return { LABS, FRONTIER_MODELS, PERSONAL_AGENTS };
 });

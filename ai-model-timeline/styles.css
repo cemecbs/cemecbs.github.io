@@ -1416,6 +1416,198 @@ body {
 }
 
 /* ==========================================================================
+   Frontier Personal Agents Section
+   ========================================================================== */
+.agents-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  scroll-margin-top: 1rem;
+}
+
+.agents-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.agents-section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.agents-section-sub {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  max-width: 70ch;
+}
+
+.agents-count-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 0.2rem 0.7rem;
+  white-space: nowrap;
+}
+
+.agents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.agent-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.1rem 1.2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-top: 2px solid var(--agent-lab-color, var(--accent-cyan));
+  border-radius: var(--radius-md);
+  min-width: 0;
+}
+
+.agent-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.agent-lab-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--agent-lab-color, var(--accent-cyan));
+}
+
+.agent-lab-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.agent-status-pill {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-full);
+  padding: 0.1rem 0.55rem;
+  text-align: right;
+}
+
+.agent-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+  line-height: 1.25;
+}
+
+.agent-date {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.agent-summary {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.agent-spec-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.agent-spec-grid dt {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  font-weight: 700;
+  padding-top: 0.12rem;
+  white-space: nowrap;
+}
+
+.agent-spec-grid dd {
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+
+.agent-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.agent-chip {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 0.1rem 0.55rem;
+}
+
+.agent-capabilities {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.agent-capabilities li {
+  position: relative;
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  padding-left: 1.1rem;
+  line-height: 1.4;
+}
+
+.agent-capabilities li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--agent-lab-color, var(--accent-cyan));
+  font-weight: bold;
+}
+
+.agent-source {
+  margin-top: auto;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.75rem;
+}
+
+.agent-source a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+}
+
+.agent-source a:hover,
+.agent-source a:focus-visible {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
    Site Footer
    ========================================================================== */
 .site-footer {

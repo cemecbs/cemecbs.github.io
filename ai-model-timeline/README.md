@@ -35,6 +35,8 @@ Then visit [http://localhost:8000](http://localhost:8000) in any modern browser 
    - Covers 47 milestone frontier models from ChatGPT (GPT-3.5) and LLaMA 1 up through Claude 3.7 Sonnet, DeepSeek-R1, GPT-4.5, OpenAI o3, Gemini 3.0 Ultra, and Gemini 3.8 Flash & Live, Gemini 4 Carbon, and Claude Fable 5.2 & Mythos 5.2, Muse Ember, Inkling 2 Small, Gemini 4 Hydrogen, Gemini 4 Neon, MAI Code 2, MAI Code 2 Flash, and MAI Cyber 2 Flash.
    - Tracks architecture (Dense vs Mixture-of-Experts), context window scaling (from 4k to 4,000,000 tokens), benchmark ratings (Chatbot Arena Elo, MMLU, SWE-bench, Math/AIME), and defining technical breakthroughs.
 
+   - **Frontier Personal Agents** section below the chart: 4 consumer agents tracked separately in `PERSONAL_AGENTS` (Grok Bot, Muse, dots, and Claude Duet), with status, powering model, surfaces, pricing and a primary-source link.
+
 3. **Rich Hover Flyout (WCAG 1.4.13 Compliant)**:
    - **Dismissible**: Press <kbd>Escape</kbd> or click the close button to dismiss anytime.
    - **Hoverable**: Includes pointer bridge timing so users can effortlessly move their mouse from the node label directly into the flyout to read, select, or copy technical specifications without it closing.
