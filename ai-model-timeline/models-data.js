@@ -87,6 +87,15 @@
       glow: "rgba(236, 72, 153, 0.4)",
       badgeBg: "rgba(236, 72, 153, 0.15)",
       border: "rgba(236, 72, 153, 0.4)"
+    },
+    microsoft: {
+      id: "microsoft",
+      name: "Microsoft AI",
+      color: "#ef4444",
+      accent: "#dc2626",
+      glow: "rgba(239, 68, 68, 0.4)",
+      badgeBg: "rgba(239, 68, 68, 0.15)",
+      border: "rgba(239, 68, 68, 0.4)"
     }
   };
 
@@ -1381,6 +1390,38 @@
           "Terminal-Bench 4.1": "57%",
           "HLE-Diamond": "58.8%",
           "Agents' Last Exam": "71.6%"
+        }
+      }
+    },
+    {
+      id: "mai-code-2",
+      name: "MAI Code 2",
+      shortName: "MAI Code 2",
+      lab: "microsoft",
+      releaseDate: "2026-11-17",
+      dateFormatted: "Nov 17, 2026",
+      year: 2026,
+      quarter: "Q4 2026",
+      category: "efficient",
+      eloIndex: 1515,
+      contextWindow: "1,050,000 tokens (922K input / 128K output)",
+      architecture: "Sparse Mixture-of-Experts decoder with integrated vision encoder (~2.8T total, 77B active); reasoning effort low to max",
+      license: "Proprietary (hosted in GitHub Copilot; weights not distributed). Pricing not disclosed",
+      isOpenWeights: false,
+      modalities: ["Text", "Vision"],
+      trainingParadigm: "Pre-trained from scratch (~50T tokens) + RL run directly in the GitHub Copilot CLI and VS Code agent harnesses",
+      summary: "Microsoft AI's first in-house frontier-scale coding model (with sibling MAI Code 2 Flash), launched at Ignite in GitHub Copilot and pitched on price-performance for everyday enterprise coding.",
+      breakthroughs: [
+        "Microsoft claims 96% of Claude Opus 5.5's coding performance at 5% of the cost, and 98% of GPT-6.1 Sol's at 40% of the cost (four-benchmark average).",
+        "TerminalBench 2.1: 84.6% and DeepSWE 1.1: 73.2% at max reasoning in the GitHub Copilot CLI harness.",
+        "Developers preferred its frontend output over GPT-6 Sol 64% of the time in blind evals (258 annotators).",
+        "MAI Code 2 Flash (12B active, ~398B total) targets high-volume edits and is in limited preview in Microsoft Foundry."
+      ],
+      benchmarks: {
+        extra: {
+          "TerminalBench 2.1": "84.6%",
+          "DeepSWE 1.1": "73.2%",
+          "SWE Atlas": "43.1%"
         }
       }
     },
