@@ -1383,6 +1383,41 @@
           "Agents' Last Exam": "71.6%"
         }
       }
+    },
+    {
+      id: "gemini-4-neon",
+      name: "Gemini 4 Neon",
+      shortName: "Gemini 4 Neon",
+      lab: "google",
+      releaseDate: "2026-11-18",
+      dateFormatted: "Nov 18, 2026",
+      year: 2026,
+      quarter: "Q4 2026",
+      category: "efficient",
+      eloIndex: 1545,
+      contextWindow: "1,000,000 tokens",
+      architecture: "Mid-tier Gemini 4 model between Carbon and Hydrogen, with four thinking levels (default high, up to xhigh)",
+      license: "Proprietary API ($3 / $15 per M tokens; $0.15 cached input)",
+      isOpenWeights: false,
+      modalities: ["Not disclosed"],
+      trainingParadigm: "Adjustable thinking depth; acts as Orchestrator directing parallel Hydrogen subagents in Antigravity",
+      summary: "Google's faster, lower-cost alternative to Gemini 4 Carbon that 'balances depth and efficiency', rolling out across the Gemini API, Gemini for business, Antigravity and the Gemini app.",
+      breakthroughs: [
+        "Scores 61 on the Artificial Analysis Intelligence Index at xhigh thinking (#3 overall) and 58.6 on the AA Coding Agent Index (#1).",
+        "At default high thinking, 32% lower cost per task than Gemini 4 Carbon.",
+        "State-of-the-art 90.5% on SEC-bench Pro and 51.26% on WebExploitBench v1.2, at roughly half the cost of competing large models.",
+        "Vals Index 70.9% (#2); #1 on Vals Legal Research Bench, Tax Agent Bench and Andon Labs Vending-Bench 2 ($16,843)."
+      ],
+      benchmarks: {
+        secBenchPro: "90.5%",
+        extra: {
+          "AA Intelligence Idx": "61 (xhigh)",
+          "AA Coding Agent Idx": "58.6",
+          "Terminal-Bench 4.1": "65.2%",
+          "HLE-Diamond": "71.3%",
+          "Vals Index": "70.9%"
+        }
+      }
     }
   ];
 
