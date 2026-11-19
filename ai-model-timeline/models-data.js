@@ -1426,6 +1426,67 @@
       }
     },
     {
+      id: "mai-code-2-flash",
+      name: "MAI Code 2 Flash",
+      shortName: "MAI Code 2 Flash",
+      lab: "microsoft",
+      releaseDate: "2026-11-17",
+      dateFormatted: "Nov 17, 2026",
+      year: 2026,
+      quarter: "Q4 2026",
+      category: "efficient",
+      eloIndex: 1445,
+      contextWindow: "1,050,000 tokens (922K input / 128K output)",
+      architecture: "Sparse Mixture-of-Experts decoder with integrated vision encoder (~398B total, 12B active); distilled from a larger in-house MAI teacher",
+      license: "Proprietary (GitHub Copilot; limited-access preview in Microsoft Foundry). Pricing not disclosed",
+      isOpenWeights: false,
+      modalities: ["Text", "Vision"],
+      trainingParadigm: "Pre-trained from scratch (~25T tokens) with logit distillation + RL in the GitHub Copilot CLI and VS Code harnesses",
+      summary: "The low-latency, low-cost tier of Microsoft AI's MAI Code 2 family, built for high-volume code explanations, targeted edits and routine fixes.",
+      breakthroughs: [
+        "Microsoft claims performance comparable to GPT-6 Luna at 65% of the price and Claude Haiku 5.5 at 20% of the price.",
+        "TerminalBench 2.1: 78.3% and DeepSWE 1.1: 59.9% at max reasoning; edges MAI Code 2 on SWE Atlas (44.8% vs 43.1%).",
+        "Grows from 5B active parameters (MAI-Code-1.1-Flash) to 12B active, with a 1M-token context window."
+      ],
+      benchmarks: {
+        extra: {
+          "TerminalBench 2.1": "78.3%",
+          "DeepSWE 1.1": "59.9%",
+          "SWE Atlas": "44.8%"
+        }
+      }
+    },
+    {
+      id: "mai-cyber-2-flash",
+      name: "MAI Cyber 2 Flash",
+      shortName: "MAI Cyber 2 Flash",
+      lab: "microsoft",
+      releaseDate: "2026-11-17",
+      dateFormatted: "Nov 17, 2026",
+      year: 2026,
+      quarter: "Q4 2026",
+      category: "efficient",
+      eloIndex: 1450,
+      contextWindow: "1,000,000 tokens",
+      architecture: "Not disclosed",
+      license: "Proprietary; exclusive to Microsoft security products incl. Codename MDASH ($0.10 / $0.50 per M tokens eval cost)",
+      isOpenWeights: false,
+      modalities: ["Not disclosed"],
+      trainingParadigm: "Specialist security model; successor to MAI Cyber 1.1 Flash",
+      summary: "Microsoft AI's specialist security model, announced at Ignite and rolling out to verified defenders in Microsoft security products from mid-December.",
+      breakthroughs: [
+        "CyberGym-E2E: 92.3% vs 91.5% for GPT-6 Astra, using half the reasoning budget, at under 2% of the cost per task.",
+        "WebExploitBench: 40.4% vs 38.4% for GPT-5.6 Cyber at the same reasoning budget.",
+        "1M-token context window, four times MAI Cyber 1.1 Flash, and priced 86% lower on output tokens."
+      ],
+      benchmarks: {
+        extra: {
+          "CyberGym-E2E": "92.3%",
+          "WebExploitBench": "40.4%"
+        }
+      }
+    },
+    {
       id: "gemini-4-neon",
       name: "Gemini 4 Neon",
       shortName: "Gemini 4 Neon",
