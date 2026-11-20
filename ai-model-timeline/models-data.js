@@ -1489,6 +1489,65 @@
       }
     },
     {
+      id: "gpt-62-astra",
+      name: "GPT-6.2 Astra",
+      shortName: "GPT-6.2 Astra",
+      lab: "openai",
+      releaseDate: "2026-11-17",
+      dateFormatted: "Nov 17, 2026",
+      year: 2026,
+      quarter: "Q4 2026",
+      category: "flagship",
+      eloIndex: 1552,
+      contextWindow: "Not disclosed",
+      architecture: "Not disclosed",
+      license: "Proprietary API ($8 / $40 per M tokens; $0.40 cached input)",
+      isOpenWeights: false,
+      modalities: ["Not disclosed"],
+      trainingParadigm: "Not disclosed",
+      summary: "OpenAI's top model, released alongside GPT-6.2 Sol to Plus, Pro, Enterprise and Edu users in ChatGPT Work and Codex, and in the API as gpt-6.2-astra.",
+      breakthroughs: [
+        "Priced 20% below GPT-6 Astra.",
+        "GDPval v2 up 6.2 points and Agents' Last Exam up 5.2 points over GPT-6 Astra.",
+        "Terminal-Bench-Science 0.1 up 9 points over GPT-6 Astra.",
+        "AA-3D Elo of 1,318, ahead of Claude Fable 5.2 (1,271)."
+      ],
+      benchmarks: {
+        extra: {
+          "AA-3D Elo": "1,318"
+        }
+      }
+    },
+    {
+      id: "gpt-62-sol",
+      name: "GPT-6.2 Sol",
+      shortName: "GPT-6.2 Sol",
+      lab: "openai",
+      releaseDate: "2026-11-17",
+      dateFormatted: "Nov 17, 2026",
+      year: 2026,
+      quarter: "Q4 2026",
+      category: "efficient",
+      eloIndex: 1538,
+      contextWindow: "Not disclosed",
+      architecture: "Not disclosed",
+      license: "Proprietary API ($2 / $10 per M tokens; $0.10 cached input)",
+      isOpenWeights: false,
+      modalities: ["Not disclosed"],
+      trainingParadigm: "Not disclosed",
+      summary: "OpenAI's lower-cost model, released with GPT-6.2 Astra; OpenAI calls it smarter and more efficient than GPT-6.1 Sol at the same price. API: gpt-6.2-sol.",
+      breakthroughs: [
+        "Same price as GPT-6.1 Sol ($2 / $10 per M tokens) with GDPval v2 up 5.3 points.",
+        "Within 0.5 points of GPT-6.2 Astra on FrontierCode 2.0 at a quarter of the price.",
+        "Ultrafast mode available to Pro 200 subscribers with Sol (Pro 500 gets it with both models)."
+      ],
+      benchmarks: {
+        extra: {
+          "AA-3D Elo": "1,259"
+        }
+      }
+    },
+    {
       id: "gemini-4-neon",
       name: "Gemini 4 Neon",
       shortName: "Gemini 4 Neon",
@@ -1554,11 +1613,11 @@
       name: "Muse",
       lab: "meta",
       releaseDate: "2026-09-08",
-      dateFormatted: "Sep 8, 2026",
-      status: "Rolling out (US, Singapore)",
+      dateFormatted: "Sep 8, 2026 · Australia on Nov 17, 2026",
+      status: "Rolling out (US, Singapore, Australia)",
       formFactor: "Personal agent on a dedicated cloud computer with its own browser (Muse Secure VM)",
       poweredBy: "Muse Spark at launch; Muse Wonder announced as coming",
-      surfaces: ["iOS", "Android", "muse.ai", "WhatsApp", "AI glasses (coming soon)"],
+      surfaces: ["iOS", "Android", "muse.ai", "Mac app", "WhatsApp", "AI glasses (coming soon)"],
       pricing: "Free for most use, with subscription plans for more; prices not published",
       summary: "Meta's personal AI agent from Meta Superintelligence Labs, used through an app and messaging, that keeps working after the app is closed.",
       capabilities: [

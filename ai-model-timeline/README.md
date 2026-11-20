@@ -32,7 +32,7 @@ Then visit [http://localhost:8000](http://localhost:8000) in any modern browser 
    - Distinctive lab brand color coding: OpenAI (emerald teal), Google DeepMind (electric blue), Anthropic (warm amber), Meta AI (violet), Mistral AI (blaze orange), xAI (steel silver), DeepSeek (sky azure).
 
 2. **Frontier AI Dataset (2022 – Late 2026)**:
-   - Covers 47 milestone frontier models from ChatGPT (GPT-3.5) and LLaMA 1 up through Claude 3.7 Sonnet, DeepSeek-R1, GPT-4.5, OpenAI o3, Gemini 3.0 Ultra, and Gemini 3.8 Flash & Live, Gemini 4 Carbon, and Claude Fable 5.2 & Mythos 5.2, Muse Ember, Inkling 2 Small, Gemini 4 Hydrogen, Gemini 4 Neon, MAI Code 2, MAI Code 2 Flash, and MAI Cyber 2 Flash.
+   - Covers 49 milestone frontier models from ChatGPT (GPT-3.5) and LLaMA 1 up through Claude 3.7 Sonnet, DeepSeek-R1, GPT-4.5, OpenAI o3, Gemini 3.0 Ultra, and Gemini 3.8 Flash & Live, Gemini 4 Carbon, and Claude Fable 5.2 & Mythos 5.2, Muse Ember, Inkling 2 Small, Gemini 4 Hydrogen, Gemini 4 Neon, MAI Code 2, MAI Code 2 Flash, MAI Cyber 2 Flash, GPT-6.2 Astra, and GPT-6.2 Sol.
    - Tracks architecture (Dense vs Mixture-of-Experts), context window scaling (from 4k to 4,000,000 tokens), benchmark ratings (Chatbot Arena Elo, MMLU, SWE-bench, Math/AIME), and defining technical breakthroughs.
 
    - **Frontier Personal Agents** section below the chart: 4 consumer agents tracked separately in `PERSONAL_AGENTS` (Grok Bot, Muse, dots, and Claude Duet), with status, powering model, surfaces, pricing and a primary-source link.
@@ -76,6 +76,6 @@ frontier-ai-timeline/
 ├── index.html       # Semantic HTML5 markup, accessible popover containers & controls
 ├── styles.css       # Dark theme tokens, responsive layouts, glassmorphism, scrollbars
 ├── app.js           # Interactive state, view renderers, collision detection, event handlers
-├── models-data.js   # Structured dataset of 47 frontier models (2022 - 2026)
+├── models-data.js   # Structured dataset of 49 frontier models (2022 - 2026)
 └── README.md        # Documentation and quick start guide
 ```
