@@ -13,6 +13,7 @@
     root.LABS = data.LABS;
     root.FRONTIER_MODELS = data.FRONTIER_MODELS;
     root.PERSONAL_AGENTS = data.PERSONAL_AGENTS;
+    root.FRONTIER_LABS = data.FRONTIER_LABS;
   }
 })(typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : this, function () {
 
@@ -1613,5 +1614,157 @@
     }
   ];
 
-  return { LABS, FRONTIER_MODELS, PERSONAL_AGENTS };
+  // Frontier AI labs profiled by Built In ("10 Frontier AI Labs to Know", Nov 19, 2026).
+  // Kept separate from LABS (which drives the chart's colors and filters): `lab` links a
+  // profile to a LABS key when that lab has models on the timeline, else null + own `color`.
+  const FRONTIER_LABS = [
+    {
+      id: "anthropic",
+      name: "Anthropic",
+      lab: "anthropic",
+      origin: "AI startup",
+      summary: "Best known for the Claude chatbot and an enterprise offering noted for coding, with AI safety as a stated priority.",
+      knownFor: ["Claude", "Claude Mythos"],
+      focus: [
+        "Held back the release of Claude Mythos, which Built In cites as evidence of its safety-first approach.",
+        "Runs a frontier team that studies AI systems and best practices.",
+        "Recently researched ways to prove an output came from a specific AI model."
+      ],
+      sourceLabel: "Built In: 10 Frontier AI Labs to Know",
+      sourceUrl: "https://builtin.com/articles/top-frontier-ai-lab-companies"
+    },
+    {
+      id: "meta",
+      name: "Meta",
+      lab: "meta",
+      origin: "AI and VR company",
+      summary: "Builds AI for everyday individual use under its \"personal superintelligence\" vision.",
+      knownFor: ["Muse Spark", "Meta Muse"],
+      focus: [
+        "Reorganized its AI work under Meta Superintelligence Labs.",
+        "Muse Spark is its compact model.",
+        "Meta Muse is a personal AI agent that completes multi-step tasks with little or no supervision."
+      ],
+      sourceLabel: "Built In: 10 Frontier AI Labs to Know",
+      sourceUrl: "https://builtin.com/articles/top-frontier-ai-lab-companies"
+    },
+    {
+      id: "deepseek",
+      name: "DeepSeek",
+      lab: "deepseek",
+      origin: "Chinese startup",
+      summary: "Its DeepSeek-R1 model rivaled larger American models at a fraction of the size and cost, shocking the market.",
+      knownFor: ["DeepSeek-R1", "V4-Flash", "V4.1-Flash"],
+      focus: [
+        "V4-Flash and V4.1-Flash bring competitive capability to smaller models.",
+        "Built In says these releases change the economics of AI for companies cutting costs."
+      ],
+      sourceLabel: "Built In: 10 Frontier AI Labs to Know",
+      sourceUrl: "https://builtin.com/articles/top-frontier-ai-lab-companies"
+    },
+    {
+      id: "openai",
+      name: "OpenAI",
+      lab: "openai",
+      origin: "AI lab",
+      summary: "Started the modern generative AI era with the release of ChatGPT in 2022.",
+      knownFor: ["ChatGPT"],
+      focus: [
+        "States artificial general intelligence as its ultimate goal.",
+        "Research targets multimodal models that handle written, visual and audio data."
+      ],
+      sourceLabel: "Built In: 10 Frontier AI Labs to Know",
+      sourceUrl: "https://builtin.com/articles/top-frontier-ai-lab-companies"
+    },
+    {
+      id: "thinkingmachines",
+      name: "Thinking Machines Lab",
+      lab: "thinkingmachines",
+      origin: "Startup",
+      summary: "Founded by Mira Murati, former chief technology officer at OpenAI.",
+      knownFor: ["Inkling"],
+      focus: [
+        "Inkling, its first model, is a generalist covering coding, reasoning and agentic tool use.",
+        "Aims to promote collaboration by sharing its research and model parameters.",
+        "Designs models that work with human involvement rather than without it."
+      ],
+      sourceLabel: "Built In: 10 Frontier AI Labs to Know",
+      sourceUrl: "https://builtin.com/articles/top-frontier-ai-lab-companies"
+    },
+    {
+      id: "google",
+      name: "Google DeepMind",
+      lab: "google",
+      origin: "AI research lab",
+      summary: "Brings together machine learning experts, scientists and engineers to extend how far AI can reason.",
+      knownFor: ["Gemini 4 Argon", "Gemini 4 Carbon", "Gemini app", "AI Mode in Search"],
+      focus: [
+        "Gemini 4 Argon targets long-horizon reasoning in areas such as cybersecurity and software engineering.",
+        "Gemini 4 Carbon followed shortly after.",
+        "Its models power Google's Gemini app and AI Mode in Search."
+      ],
+      sourceLabel: "Built In: 10 Frontier AI Labs to Know",
+      sourceUrl: "https://builtin.com/articles/top-frontier-ai-lab-companies"
+    },
+    {
+      id: "perplexity",
+      name: "Perplexity",
+      lab: null,
+      color: "#2dd4bf",
+      origin: "AI search company",
+      summary: "Challenges Google's search dominance with an AI search engine that answers in natural language with citations.",
+      knownFor: ["Perplexity search engine"],
+      focus: [
+        "Its research team pre-trains open-weight models and improves them with reinforcement learning.",
+        "Plans a multi-agent system to automate scientific research."
+      ],
+      sourceLabel: "Built In: 10 Frontier AI Labs to Know",
+      sourceUrl: "https://builtin.com/articles/top-frontier-ai-lab-companies"
+    },
+    {
+      id: "moonshot",
+      name: "Moonshot AI",
+      lab: null,
+      color: "#84cc16",
+      origin: "Chinese startup",
+      summary: "Best known for Kimi K3, a model for knowledge work, coding, and video and game development.",
+      knownFor: ["Kimi K3", "Kimi K3.1 Pro"],
+      focus: [
+        "Kimi K3.1 Pro is the first K3.1 model, improving on K3 in coding, 3D creation and agentic features.",
+        "Built In says the K3.1 Pro release suggests China is catching up in the AI race."
+      ],
+      sourceLabel: "Built In: 10 Frontier AI Labs to Know",
+      sourceUrl: "https://builtin.com/articles/top-frontier-ai-lab-companies"
+    },
+    {
+      id: "mistral",
+      name: "Mistral AI",
+      lab: "mistral",
+      origin: "French startup",
+      summary: "Known for open-weight models, whose final parameters are public while training data and code are not.",
+      knownFor: ["Mistral Large 4"],
+      focus: [
+        "Mistral Large 4 targets complex reasoning, coding and agentic work.",
+        "Also researches AI guardrails, simulations and robotics applications."
+      ],
+      sourceLabel: "Built In: 10 Frontier AI Labs to Know",
+      sourceUrl: "https://builtin.com/articles/top-frontier-ai-lab-companies"
+    },
+    {
+      id: "xai",
+      name: "SpaceXSI (formerly xAI)",
+      lab: "xai",
+      origin: "AI lab",
+      summary: "Maker of the Grok chatbot, which draws on real-time data from the X platform. Built In lists the company under its new name, SpaceXSI.",
+      knownFor: ["Grok", "Colossus supercomputer"],
+      focus: [
+        "Builds models for image and voice generation, and bot assistants.",
+        "Trains on Colossus, described as one of the world's largest supercomputers, which it built in just over four months."
+      ],
+      sourceLabel: "Built In: 10 Frontier AI Labs to Know",
+      sourceUrl: "https://builtin.com/articles/top-frontier-ai-lab-companies"
+    }
+  ];
+
+  return { LABS, FRONTIER_MODELS, PERSONAL_AGENTS, FRONTIER_LABS };
 });

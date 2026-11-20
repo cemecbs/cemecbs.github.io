@@ -16,6 +16,7 @@
   const LABS = DATA.LABS || {};
   const FRONTIER_MODELS = DATA.FRONTIER_MODELS || [];
   const PERSONAL_AGENTS = DATA.PERSONAL_AGENTS || [];
+  const FRONTIER_LABS = DATA.FRONTIER_LABS || [];
 
   // Global Timeline State
   const state = {
@@ -103,6 +104,7 @@
     setupEventListeners();
     populateCompareSelectors();
     renderPersonalAgents();
+    renderFrontierLabs();
   }
 
   /**
@@ -165,6 +167,74 @@
     if (badge) badge.textContent = agents.length + ' tracked';
     const stat = document.getElementById('statAgentsCount');
     if (stat) stat.textContent = agents.length;
+  }
+
+  /**
+   * Render the Frontier AI Labs cards (source order).
+   * Built with DOM APIs and textContent only, so data is never parsed as HTML.
+   */
+  function renderFrontierLabs() {
+    const grid = document.getElementById('labsGrid');
+    if (!grid) return;
+    const el = (tag, cls, text) => {
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text !== undefined) n.textContent = text;
+      return n;
+    };
+    const models = DATA.FRONTIER_MODELS || [];
+    grid.replaceChildren();
+
+    FRONTIER_LABS.forEach(profile => {
+      const labInfo = profile.lab ? LABS[profile.lab] : null;
+      const color = (labInfo && labInfo.color) || profile.color || '#38bdf8';
+      const labModels = profile.lab ? models.filter(m => m.lab === profile.lab) : [];
+      const latest = labModels.reduce((a, b) => (!a || b.releaseDate >= a.releaseDate ? b : a), null);
+
+      const card = el('article', 'agent-card');
+      card.dataset.labProfileId = profile.id;
+      card.style.setProperty('--agent-lab-color', color);
+
+      const top = el('div', 'agent-card-top');
+      top.append(
+        el('span', 'agent-lab-badge', profile.origin),
+        el('span', 'agent-status-pill', labModels.length ? labModels.length + (labModels.length === 1 ? ' model' : ' models') + ' on timeline' : 'Not on timeline yet')
+      );
+      card.append(top);
+
+      const head = el('div');
+      head.append(el('h3', 'agent-name', profile.name));
+      card.append(head, el('p', 'agent-summary', profile.summary));
+
+      const specs = el('dl', 'agent-spec-grid');
+      specs.append(
+        el('dt', '', 'Latest here'),
+        el('dd', '', latest ? latest.name + ' · ' + latest.dateFormatted : 'No models plotted')
+      );
+      card.append(specs);
+
+      const chips = el('div', 'agent-chips');
+      (profile.knownFor || []).forEach(s => chips.append(el('span', 'agent-chip', s)));
+      card.append(chips);
+
+      const focus = el('ul', 'agent-capabilities');
+      (profile.focus || []).forEach(c => focus.append(el('li', '', c)));
+      card.append(focus);
+
+      if (profile.sourceUrl && /^https:\/\//.test(profile.sourceUrl)) {
+        const src = el('div', 'agent-source');
+        const link = el('a', '', profile.sourceLabel || 'Source');
+        link.href = profile.sourceUrl;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        src.append(link);
+        card.append(src);
+      }
+      grid.append(card);
+    });
+
+    const badge = document.getElementById('labsCountBadge');
+    if (badge) badge.textContent = FRONTIER_LABS.length + ' profiled';
   }
 
   /**

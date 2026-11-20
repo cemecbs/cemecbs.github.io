@@ -36,6 +36,7 @@ Then visit [http://localhost:8000](http://localhost:8000) in any modern browser 
    - Tracks architecture (Dense vs Mixture-of-Experts), context window scaling (from 4k to 4,000,000 tokens), benchmark ratings (Chatbot Arena Elo, MMLU, SWE-bench, Math/AIME), and defining technical breakthroughs.
 
    - **Frontier Personal Agents** section below the chart: 4 consumer agents tracked separately in `PERSONAL_AGENTS` (Grok Bot, Muse, dots, and Claude Duet), with status, powering model, surfaces, pricing and a primary-source link.
+   - **Frontier AI Labs** section below the agents: 10 lab profiles in `FRONTIER_LABS` (Anthropic, Meta, DeepSeek, OpenAI, Thinking Machines Lab, Google DeepMind, Perplexity, Moonshot AI, Mistral AI, and SpaceXSI, formerly xAI) from Built In's "10 Frontier AI Labs to Know", each showing its model count and latest model on this timeline.
 
 3. **Rich Hover Flyout (WCAG 1.4.13 Compliant)**:
    - **Dismissible**: Press <kbd>Escape</kbd> or click the close button to dismiss anytime.
